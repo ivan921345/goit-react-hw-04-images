@@ -12,6 +12,9 @@ const App = () => {
   const [page, setPage] = useState(2);
   const [query, setQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  useEffect(() => {
+    setQuery('');
+  }, [query]);
 
   useEffect(() => {
     if (isLoading) {
